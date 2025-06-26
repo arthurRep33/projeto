@@ -7,40 +7,40 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import style from '../styles/style';
+import estilo from './../styles/StyleConta';
 
-const Conta: React.FC = () => {
+export function Conta (){
   return (
-    <ScrollView style={style.container}>
+    <View style={estilo.container}>
       {/* TopBar com nome e ícones */}
-      <View style={style.topBar}>
-        <View style={style.profileContainer}>
+      <View style={estilo.topBar}>
+        <View style={estilo.profileContainer}>
           <Image
             source={{ uri: 'https://via.placeholder.com/80' }}
-            style={style.profileImage}
+            style={estilo.profileImage}
           />
-          <Text style={style.name}>Ãn Tui Terror</Text>
-          <Text style={style.username}>@TuiAmaOruam</Text>
+          <Text style={estilo.name}>Ãn Tui Terror</Text>
+          <Text style={estilo.username}>@TuiAmaOruam</Text>
         </View>
 
         {/* Opções de Conta */}
-        <View style={style.accountOptions}>
+        <View style={estilo.accountOptions}>
           <TouchableOpacity>
-            <Text style={style.option}>Mudar de Conta</Text>
+            <Text style={estilo.option}>Mudar de Conta</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={style.option}>Conta Google</Text>
+            <Text style={estilo.option}>Conta Google</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={style.option}>Ativar Guia Anônima</Text>
+            <Text style={estilo.option}>Ativar Guia Anônima</Text>
           </TouchableOpacity>
         </View>
       </View>
 
       {/* Histórico */}
-      <View style={style.section}>
-        <Text style={style.sectionTitle}>Histórico</Text>
-        <View style={style.historyGrid}>
+      <View style={estilo.section}>
+        <Text style={estilo.sectionTitle}>Histórico</Text>
+        <View style={estilo.historyGrid}>
           {[
             "Neymar 2016/17 👑 Ballon D'Or Level Skills, Goals, Dribbling & Assists",
             'DE MALA E CÚIA EM BEZERROS',
@@ -49,19 +49,19 @@ const Conta: React.FC = () => {
             '2025 Porsche 911 GTS - Sound, Interior and Exterior',
             'ORUAM saind0 NA MÃO com o WESLEY ALEMAO… (LUTA COMPLETA)'
           ].map((title, index) => (
-            <View key={index} style={style.historyItem}>
+            <View key={index} style={estilo.historyItem}>
               <Image
                 source={{ uri: 'https://via.placeholder.com/150x100' }}
-                style={style.thumbnail}
+                style={estilo.thumbnail}
               />
-              <Text style={style.historyText}>{title}</Text>
+              <Text style={estilo.historyText}>{title}</Text>
             </View>
           ))}
         </View>
       </View>
 
       {/* Menu inferior */}
-      <View style={style.footer}>
+      <View style={estilo.footer}>
         {[
           'Seu Canal',
           'Seus Videos',
@@ -70,12 +70,12 @@ const Conta: React.FC = () => {
           'Assistir Mais Tarde',
         ].map((item, idx) => (
           <TouchableOpacity key={idx}>
-            <Text style={style.menuItem}>{item}</Text>
+            <Text style={estilo.menuItem}>{item}</Text>
           </TouchableOpacity>
         ))}
       </View>
-    </ScrollView>
+    </View>
   );
 };
 
-export default Conta;
+
