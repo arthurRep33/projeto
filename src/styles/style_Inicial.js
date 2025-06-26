@@ -10,6 +10,18 @@ export default StyleSheet.create({
   textoTitulo:{
     color:'pink',
     fontSize: 30, 
-        
-    }
+    },
+    containerInicial: {
+    flex: 1,
+    backgroundColor: '#FFFFFF',
+  },
+  logoContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  logoYouTube: {
+    width: 100,
+    height: 100,
+  },
 });
