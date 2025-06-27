@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import estilo from './../styles/StyleConta';
+import estilo from '../styles/styleConta';
 
 export function Conta (){
   return (
@@ -59,7 +59,7 @@ export function Conta (){
           ))}
         </View>
       </View>
-
+          <div></div>
       {/* Menu inferior */}
       <View style={estilo.footer}>
         {[
@@ -77,5 +77,6 @@ export function Conta (){
     </View>
   );
 };
+
 
 
