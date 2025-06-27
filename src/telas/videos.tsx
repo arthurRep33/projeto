@@ -1,8 +1,19 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import estilo from '../styles/styleVideos';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-export default function Videos() {
+type RootStackParamList = {
+  Home: undefined;
+  Perfil: undefined;
+};  
+
+type Props = {
+  navigation: any;
+};
+
+
+export default function Videos({navigation}:Props) {
   return (
     <View style={estilo.container}>
       {/* Cabeçalho */}
@@ -11,7 +22,9 @@ export default function Videos() {
         <View style={estilo.headerIcons}>
           <Text>📺</Text>
           <Text>🔔</Text>
-          <Text>😎</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Perfil')}>
+            <Text>😎</Text>
+          </TouchableOpacity>
         </View>
       </View>
 

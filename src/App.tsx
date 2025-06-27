@@ -1,13 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-import estilo from './styles/style_Inicial';
-import { Conta } from './telas/conta';
-import  Videos  from './telas/videos';
+// src/App.tsx
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// Importar suas telas
+import Videos from './telas/videos';
+import Conta from './telas/conta'; // crie essa tela depois
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return ( 
-    <Videos/>
- );
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Videos} />
+        <Stack.Screen name="Perfil" component={Conta} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
-
-

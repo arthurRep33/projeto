@@ -9,7 +9,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import estilo from '../styles/styleConta';
 
-export function Conta (){
+export default function Conta (){
   return (
     <View style={estilo.container}>
       {/* TopBar com nome e ícones */}
@@ -59,7 +59,6 @@ export function Conta (){
           ))}
         </View>
       </View>
-          <div></div>
       {/* Menu inferior */}
       <View style={estilo.footer}>
         {[
