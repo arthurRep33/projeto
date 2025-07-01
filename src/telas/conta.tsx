@@ -9,15 +9,19 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import estilo from '../styles/styleConta';
 
-export default function Conta (){
+export default function Conta (props: any){
+  const navigation = props.navigation;
+
   return (
-    <View style={estilo.container}>
+    <View style={estilo.containerConta}>
       {/* TopBar com nome e ícones */}
       <View style={estilo.topBar}>
+        <TouchableOpacity style={estilo.option} onPress={() => navigation.goBack()}>
+          <Text style={estilo.option}>← Voltar</Text>
+        </TouchableOpacity>
         <View style={estilo.profileContainer}>
           <Image
-            source={{ uri: 'https://via.placeholder.com/80' }}
-            style={estilo.profileImage}
+            source={require('../../assets/oruam.jpg')} style={estilo.imagem}
           />
           <Text style={estilo.name}>Ãn Tui Terror</Text>
           <Text style={estilo.username}>@TuiAmaOruam</Text>

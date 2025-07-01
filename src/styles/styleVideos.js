@@ -20,7 +20,7 @@ export default StyleSheet.create({
   },
   headerIcons: {
     flexDirection: 'row',
-    gap: 10,
+    gap: 20,
   },
   categorias: {
     flexDirection: 'row',
@@ -67,4 +67,21 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
   },
+  accountButton: {
+    fontSize: 30
+
+  },
+
+icons: {
+  width: 24,
+  height: 24,
+  tintColor: '#333', // só funciona com imagens monocromáticas (ex: ícones em PNG preto)
+  marginRight: 8,
+  },
+pfp: {
+  width: 40,
+  height: 40,
+  borderRadius: 50,     // metade da largura/altura pra formar o círculo
+  borderWidth: 2,
+}
 });

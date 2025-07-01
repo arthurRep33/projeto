@@ -20,10 +20,14 @@ export default function Videos({navigation}:Props) {
       <View style={estilo.header}>
         <Text style={estilo.logo}>YouTube</Text>
         <View style={estilo.headerIcons}>
-          <Text>📺</Text>
-          <Text>🔔</Text>
+          <Image
+            source={require('../../assets/noti.png')} style={estilo.icons}
+          />
+          <Text style={estilo.accountButton} >🔔</Text>
           <TouchableOpacity onPress={() => navigation.navigate('Perfil')}>
-            <Text>😎</Text>
+            <Image
+                       source={require('../../assets/oruam.jpg')} style={estilo.pfp}
+                     />
           </TouchableOpacity>
         </View>
       </View>
