@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Videos from './telas/videos';
 import Conta from './telas/conta'; // crie essa tela depois
 import Inicial from './telas/Inicial';
+import Historico from './telas/historico_pesquisa';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ export default function App() {
         <Stack.Screen name="Inicial" component={Inicial}  options={{ headerShown: false }}/>
         <Stack.Screen name="Home" component={Videos}  options={{ headerShown: false }}/>
         <Stack.Screen name="Perfil" component={Conta}  options={{ headerShown: false }}/>
+        <Stack.Screen name="Historico" component={Historico}  options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -23,7 +23,14 @@ export default function Videos({navigation}:Props) {
           <Image
             source={require('../../assets/noti.png')} style={estilo.icons}
           />
-          <Text style={estilo.accountButton} >🔔</Text>
+
+          <TouchableOpacity onPress={() => navigation.navigate('Historico')}>
+            
+                        <Text style={estilo.accountButton} >🔎</Text>
+                     
+          </TouchableOpacity>
+
+         
           <TouchableOpacity onPress={() => navigation.navigate('Perfil')}>
             <Image
                        source={require('../../assets/oruam.jpg')} style={estilo.pfp}
